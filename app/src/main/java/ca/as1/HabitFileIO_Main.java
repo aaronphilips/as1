@@ -44,7 +44,7 @@ public class HabitFileIO_Main {
             }
             return habitList;
         }
-        public void saveInFile(Context context, ArrayList<Habit> habitList) {
+        public static void saveInFile(Context context, ArrayList<Habit> habitList) {
             try {
 
                 FileOutputStream fos = context.openFileOutput(FILENAME,0);

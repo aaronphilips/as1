@@ -7,6 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class MainHabitTrackerActivity extends Activity {
 	private ListView oldHabitList;
 	private ArrayList<Habit> habitList =new ArrayList<Habit>();
 	private ArrayAdapter<Habit> adapter;
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class MainHabitTrackerActivity extends Activity {
 
 				//habitList.add(newTweet);
 				adapter.notifyDataSetChanged();
-				HabitFileIO_Main.HabitFileIO.
+				HabitFileIO_Main.HabitFileIO.saveInFile(MainHabitTrackerActivity.this,habitList);
 			}
 		});
 		clearButton.setOnClickListener(new View.OnClickListener() {
