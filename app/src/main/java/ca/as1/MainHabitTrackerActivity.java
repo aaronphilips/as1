@@ -1,13 +1,8 @@
 package ca.as1;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,27 +11,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.google.gson.Gson;
-
 public class MainHabitTrackerActivity extends Activity {
 
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldHabitList;
-	private ArrayList<Habit> habitList =new ArrayList<Habit>();
+	private ArrayList<Habit> habitList = new ArrayList<Habit>();
 	private ArrayAdapter<Habit> adapter;
 
-	/** Called when the activity is first created. */
+	/**
+	 * Called when the activity is first created.
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		HabitFileIO_Main.HabitFileIO.loadFromFile(this);
+		habitList=HabitFileIO_Main.HabitFileIO.loadFromFile(this);
 		//bodyText = (EditText) findViewById(R.id.body);
 		Button add_habitButton = (Button) findViewById(R.id.add_habit);
 		oldHabitList = (ListView) findViewById(R.id.oldHabitList);
-		Button clearButton= (Button) findViewById(R.id.clear);
-		clearButton.setText(R.string.overview);
+		Button switchDayButton = (Button) findViewById(R.id.clear);
+		switchDayButton.setText(R.string.switch_day);
 		add_habitButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
@@ -48,16 +43,17 @@ public class MainHabitTrackerActivity extends Activity {
 				//newTweet.getMessage();
 
 				//habitList.add(newTweet);
+				gotoAddHabitActivity();
 				adapter.notifyDataSetChanged();
-				HabitFileIO_Main.HabitFileIO.saveInFile(MainHabitTrackerActivity.this,habitList);
+				HabitFileIO_Main.HabitFileIO.saveInFile(MainHabitTrackerActivity.this, habitList);
 			}
 		});
-		clearButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v){
+		switchDayButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
 				setResult(RESULT_OK);
 //				adapter.clear();
 //				habitList.clear();
-				gotoOverview();
+				switchDay();
 
 			}
 		});
@@ -101,7 +97,7 @@ public class MainHabitTrackerActivity extends Activity {
 //			throw new RuntimeException();
 //		}
 //	}
-	
+
 //	private void saveInFile() {
 //		try {
 //
@@ -119,9 +115,17 @@ public class MainHabitTrackerActivity extends Activity {
 //		}
 //	}
 
-	public void gotoOverview(){
-		Intent intent =new Intent(this,MainHabitTrackerActivity.class);
+	public void switchDay() {
+		Intent intent = new Intent(this, MainHabitTrackerActivity.class);
 		//intent.putExtra()
 		startActivity(intent);
 	}
+
+	public void gotoAddHabitActivity() {
+		Intent intent = new Intent(this, AddHabitActivity.class);
+		startActivity(intent);
+	}
+
+
+
 }

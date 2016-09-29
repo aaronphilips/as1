@@ -8,6 +8,10 @@
         android:minSdkVersion="18"
         android:targetSdkVersion="18" />
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:icon="@drawable/ic_launcher"
@@ -24,6 +28,8 @@
         <activity
             android:name="ca.as1.OverviewHabitTrackerActivity"
             android:label="Habit Overview" />
+        <activity android:name="ca.as1.AddHabitActivity" >
+        </activity>
     </application>
 
 </manifest>
