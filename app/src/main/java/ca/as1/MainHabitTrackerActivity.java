@@ -25,7 +25,7 @@ public class MainHabitTrackerActivity extends Activity {
 	private ListView oldHabitList;
 	private ArrayList<Habit> habitList =new ArrayList<Habit>();
 	private ArrayAdapter<Habit> adapter;
-	
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
