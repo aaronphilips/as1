@@ -1,23 +1,23 @@
 [
     {
-        "outputFile": "/home/aaron/Documents/Git/as1/app/build/intermediates/res/merged/debug/values/values.xml",
+        "outputFile": "D:\\DATA\\GitHub\\as1\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 42,
-                    "endOffset": 93
+                    "endColumn": 41,
+                    "endOffset": 92
                 },
                 "from": {
-                    "file": "/home/aaron/Documents/Git/as1/app/src/main/res/values/strings.xml",
+                    "file": "D:\\DATA\\GitHub\\as1\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
                         "startOffset": 110,
-                        "endColumn": 42,
-                        "endOffset": 148
+                        "endColumn": 41,
+                        "endOffset": 147
                     }
                 }
             },
@@ -25,36 +25,57 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 98,
+                    "startOffset": 97,
                     "endColumn": 49,
-                    "endOffset": 143
+                    "endOffset": 142
                 },
                 "from": {
-                    "file": "/home/aaron/Documents/Git/as1/app/src/main/res/values/strings.xml"
+                    "file": "D:\\DATA\\GitHub\\as1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 49,
+                        "endOffset": 104
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 148,
+                    "startOffset": 147,
                     "endColumn": 45,
-                    "endOffset": 189
+                    "endOffset": 188
                 },
                 "from": {
-                    "file": "/home/aaron/Documents/Git/as1/app/src/main/res/values/strings.xml"
+                    "file": "D:\\DATA\\GitHub\\as1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 45,
+                        "endOffset": 194
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 194,
+                    "startOffset": 193,
                     "endColumn": 49,
-                    "endOffset": 239
+                    "endOffset": 238
                 },
                 "from": {
-                    "file": "/home/aaron/Documents/Git/as1/app/src/main/res/values/strings.xml"
+                    "file": "D:\\DATA\\GitHub\\as1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 200,
+                        "endColumn": 49,
+                        "endOffset": 245
+                    }
                 }
             }
         ]

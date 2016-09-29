@@ -1,18 +1,12 @@
 package ca.as1;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +16,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 public class MainHabitTrackerActivity extends Activity {
 
@@ -36,30 +29,30 @@ public class MainHabitTrackerActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		loadFromFile();
+		HabitFileIO_Main.HabitFileIO.loadFromFile(this);
 		//bodyText = (EditText) findViewById(R.id.body);
-		//Button saveButton = (Button) findViewById(R.id.save);
+		Button add_habitButton = (Button) findViewById(R.id.add_habit);
 		oldHabitList = (ListView) findViewById(R.id.oldHabitList);
 		Button clearButton= (Button) findViewById(R.id.clear);
 		clearButton.setText(R.string.overview);
-//		saveButton.setOnClickListener(new View.OnClickListener() {
-//
-//			public void onClick(View v) {
-//				setResult(RESULT_OK);
-//
-//
-//				//Tweet newTweet = new NormalTweet(text);
-//
-//				//newTweet.getMessage();
-//
-//				//habitList.add(newTweet);
-//				adapter.notifyDataSetChanged();
-//				saveInFile();
-//			}
-//		});
+		add_habitButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				setResult(RESULT_OK);
+
+
+				//Tweet newTweet = new NormalTweet(text);
+
+				//newTweet.getMessage();
+
+				//habitList.add(newTweet);
+				adapter.notifyDataSetChanged();
+				HabitFileIO_Main.HabitFileIO.
+			}
+		});
 		clearButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v){
-//				setResult(RESULT_OK);
+				setResult(RESULT_OK);
 //				adapter.clear();
 //				habitList.clear();
 				gotoOverview();
@@ -79,53 +72,54 @@ public class MainHabitTrackerActivity extends Activity {
 		oldHabitList.setAdapter(adapter);
 	}
 
-	private void loadFromFile() {
-
-		try {
-			FileInputStream fis = openFileInput(FILENAME);
-			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-			Gson gson =new Gson();
-			//code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt sept 22nd
-			Type listType=new TypeToken<ArrayList<Habit>>(){}.getType();
-			habitList = gson.fromJson(in,listType);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("Hey \n Looks like this is the first time you used Aaron Philips' habit tracker")
-					.setCancelable(false)
-					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int id) {
-							//do things
-						}
-					});
-			AlertDialog alert = builder.create();
-			alert.show();
-			//throw new RuntimeException();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			throw new RuntimeException();
-		}
-	}
+//	private void loadFromFile() {
+//
+//		try {
+//			FileInputStream fis = openFileInput(FILENAME);
+//			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+//			Gson gson =new Gson();
+//			//code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt sept 22nd
+//			Type listType=new TypeToken<ArrayList<Habit>>(){}.getType();
+//			habitList = gson.fromJson(in,listType);
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//			builder.setMessage("Hey \n Looks like this is the first time you used Aaron Philips' habit tracker")
+//					.setCancelable(false)
+//					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog, int id) {
+//							//do things
+//						}
+//					});
+//			AlertDialog alert = builder.create();
+//			alert.show();
+//			//throw new RuntimeException();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			throw new RuntimeException();
+//		}
+//	}
 	
-	private void saveInFile() {
-		try {
-
-			FileOutputStream fos = openFileOutput(FILENAME,0);
-			OutputStreamWriter writer = new OutputStreamWriter(fos);
-			Gson gson = new Gson();
-			gson.toJson(habitList,writer);
-			writer.flush();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			throw new RuntimeException();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			throw new RuntimeException();
-		}
-	}
+//	private void saveInFile() {
+//		try {
+//
+//			FileOutputStream fos = openFileOutput(FILENAME,0);
+//			OutputStreamWriter writer = new OutputStreamWriter(fos);
+//			Gson gson = new Gson();
+//			gson.toJson(habitList,writer);
+//			writer.flush();
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			throw new RuntimeException();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			throw new RuntimeException();
+//		}
+//	}
 
 	public void gotoOverview(){
-		Intent intent =new Intent(this,OverviewHabitTrackerActivity.class);
+		Intent intent =new Intent(this,MainHabitTrackerActivity.class);
+		//intent.putExtra()
 		startActivity(intent);
 	}
 }

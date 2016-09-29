@@ -16,9 +16,9 @@ public final class R {
     }
     public static final class id {
         public static final int HabitTitle=0x7f050000;
+        public static final int add_habit=0x7f050003;
         public static final int clear=0x7f050002;
         public static final int oldHabitList=0x7f050001;
-        public static final int add_habit =0x7f050003;
     }
     public static final class layout {
         public static final int list_item=0x7f030000;

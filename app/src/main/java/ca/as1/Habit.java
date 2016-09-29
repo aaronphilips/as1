@@ -4,16 +4,18 @@ import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.UUID;
 
 
 /**
  * Created by aaron on 9/25/16.
  */
-public class Habit {
+public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     private ArrayList<LocalDate> completions;
     private HashSet<DayOfWeek> daysOfWeek;
     private String name;
     private LocalDate dateCreated;
+    private UUID habitID;
 
 
     public ArrayList<LocalDate> getCompletions() {
@@ -28,8 +30,11 @@ public class Habit {
         this.dateCreated=dateCreated;
         this.daysOfWeek=dayOfWeeks;
         this.completions=new ArrayList<LocalDate>();
+        this.habitID=UUID.randomUUID();
+
 
     }
+
     @Override
     public String toString(){
         return name;
@@ -38,5 +43,17 @@ public class Habit {
 
         //TODO compare with today date
         return true;
+    }
+
+    public UUID getID() {
+        return habitID;
+    }
+
+    public int compareTo(Habit other){
+        int retVal= this.dateCreated.compareTo(other.dateCreated);
+        if(retVal==0){
+            retVal=this.name.compareToIgnoreCase(other.name);
+        }
+        return retVal;
     }
 }
