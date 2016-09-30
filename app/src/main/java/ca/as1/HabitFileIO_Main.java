@@ -5,7 +5,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -31,7 +35,12 @@ public class HabitFileIO_Main {
             try {
                 FileInputStream fis = context.openFileInput(FILENAME);
                 BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-                Gson gson =new Gson();
+
+                final GsonBuilder builder = new GsonBuilder()
+                        .registerTypeAdapter(LocalDate.class, new LocalDateSerializer());
+
+                final Gson gson = builder.create();
+
                 //code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt sept 22nd
                 Type listType=new TypeToken<ArrayList<Habit>>(){}.getType();
                 habitList = gson.fromJson(in,listType);
@@ -49,7 +58,10 @@ public class HabitFileIO_Main {
 
                 FileOutputStream fos = context.openFileOutput(FILENAME,0);
                 OutputStreamWriter writer = new OutputStreamWriter(fos);
-                Gson gson = new Gson();
+                final GsonBuilder builder = new GsonBuilder()
+                        .registerTypeAdapter(LocalDate.class, new LocalDateSerializer());
+
+                final Gson gson = builder.create();
                 gson.toJson(habitList,writer);
                 writer.flush();
             } catch (FileNotFoundException e) {

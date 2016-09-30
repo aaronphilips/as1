@@ -25,10 +25,15 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     public void addCompletions(LocalDate newCompletion) {
         this.completions.add(newCompletion);
     }
-    public Habit(String name, LocalDate dateCreated,HashSet<DayOfWeek> dayOfWeeks){
+
+
+    public Habit(String name, LocalDate dateCreated,HashSet<DayOfWeek> daysOfWeek){
+        if(daysOfWeek.size()<1){
+            throw new IllegalArgumentException();
+        }
         this.name=name;
         this.dateCreated=dateCreated;
-        this.daysOfWeek=dayOfWeeks;
+        this.daysOfWeek=daysOfWeek;
         this.completions=new ArrayList<LocalDate>();
         this.habitID=UUID.randomUUID();
 
