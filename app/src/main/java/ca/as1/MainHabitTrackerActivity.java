@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +15,8 @@ import android.widget.ListView;
 
 public class MainHabitTrackerActivity extends Activity {
 
-	private static final String FILENAME = "file.sav";
-	private EditText bodyText;
+	//private static final String FILENAME = "file.sav";
+	//private EditText bodyText;
 	private ListView oldHabitList;
 	private ArrayList<Habit> habitList = new ArrayList<Habit>();
 	private ArrayAdapter<Habit> adapter;
@@ -36,12 +38,8 @@ public class MainHabitTrackerActivity extends Activity {
 
 			public void onClick(View v) {
 				setResult(RESULT_OK);
-
-
 				//Tweet newTweet = new NormalTweet(text);
-
 				//newTweet.getMessage();
-
 				//habitList.add(newTweet);
 				gotoAddHabitActivity();
 				adapter.notifyDataSetChanged();
@@ -57,6 +55,13 @@ public class MainHabitTrackerActivity extends Activity {
 
 			}
 		});
+		oldHabitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Habit entry = (Habit) parent.getItemAtPosition(position);
+				Log.d("GOT HABIT",entry.toString());
+			}
+		});
+
 
 	}
 
