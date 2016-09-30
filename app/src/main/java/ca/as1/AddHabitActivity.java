@@ -82,7 +82,7 @@ public class AddHabitActivity extends Activity {
 
 
         Habit habit = new Habit(habitName,dt,selectedDays);
-        Log.d("dt",dt.toString());
+
         return habit;
     }
 

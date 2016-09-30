@@ -67,6 +67,10 @@ ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:9-27:46
 	android:name
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:13-57
 activity#ca.as1.AddHabitActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:28:9-29:20
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:28:9-63
 	android:name
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:28:19-51
+activity#ca.as1.habitView
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:29:9-56
+	android:name
+		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:29:19-44

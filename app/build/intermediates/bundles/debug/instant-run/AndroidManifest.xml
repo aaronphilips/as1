@@ -28,8 +28,8 @@
         <activity
             android:name="ca.as1.OverviewHabitTrackerActivity"
             android:label="Habit Overview" />
-        <activity android:name="ca.as1.AddHabitActivity" >
-        </activity>
+        <activity android:name="ca.as1.AddHabitActivity" />
+        <activity android:name="ca.as1.habitView" />
     </application>
 
 </manifest>
