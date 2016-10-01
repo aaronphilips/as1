@@ -123,6 +123,7 @@ public class MainHabitTrackerActivity extends Activity {
 	public void switchDay() {
 		Intent intent = new Intent(this, MainHabitTrackerActivity.class);
 		//intent.putExtra()
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
 		startActivity(intent);
 	}
 
