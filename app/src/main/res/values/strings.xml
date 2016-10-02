@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HabitTracker</string>
+    <string name="app_name">aphilips-HabitTracker</string>
     <string name="add_habit">Add</string>
     <!--<string name="overview">Overview</string>-->
     <string name="switch_day">Switch Day</string>

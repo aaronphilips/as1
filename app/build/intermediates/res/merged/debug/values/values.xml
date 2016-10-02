@@ -125,7 +125,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="add_habit">Add</string>
-    <string name="app_name">HabitTracker</string>
+    <string name="app_name">aphilips-HabitTracker</string>
     <string name="switch_day">Switch Day</string>
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">
         <item name="android:textColor">@android:color/primary_text_light</item>

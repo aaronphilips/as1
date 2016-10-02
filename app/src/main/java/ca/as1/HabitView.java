@@ -33,7 +33,6 @@ public class HabitView extends Activity {
             habitID=UUID.fromString(intent.getStringExtra("uuid"));
 
             habit=habitSetList.getHabit(habitID);
-            Log.d("GOT HABIT",habitSetList.getHabit(habitID).toString());
         }
 
 
@@ -100,4 +99,10 @@ public class HabitView extends Activity {
             dateEditText.setText(date.toString(), TextView.BufferType.EDITABLE);
         }
     };
+    @Override
+    protected void onStop(){
+
+        Log.d("GOT HABIT","onstop was called");
+        super.onStop();
+    }
 }

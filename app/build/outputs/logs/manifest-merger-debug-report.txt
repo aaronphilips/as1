@@ -43,7 +43,7 @@ MERGED from [com.android.support:appcompat-v7:18.0.0] D:\DATA\GitHub\as1\app\bui
 	android:label
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:14:9-45
+		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:14:9-46
 activity#ca.as1.MainHabitTrackerActivity
 ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:label
