@@ -61,4 +61,7 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
         }
         return retVal;
     }
+    public LocalDate getDateCreated(){
+        return this.dateCreated;
+    }
 }

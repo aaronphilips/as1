@@ -26,9 +26,10 @@ public class AddHabitActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_habit);
         Button add_habitButton = (Button) findViewById(R.id.addHabitButton);
-        Button setDateButoon =(Button)findViewById(R.id.setDateButton);
-        EditText dateEditText = (EditText) findViewById(R.id.dateCreatedInput);
+        Button setDateButton =(Button)findViewById(R.id.setDateButton);
+        final EditText habitName=((EditText) findViewById((R.id.habitNameInput)));
 
+        EditText dateEditText = (EditText) findViewById(R.id.dateCreatedInput);
         final LocalDate date = new LocalDate();
         dateEditText.setText(date.toString(), TextView.BufferType.EDITABLE);
         habitSetList =HabitFileIO_Main.HabitFileIO.loadFromFile(this);
@@ -38,7 +39,6 @@ public class AddHabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-
 
                 //Tweet newTweet = new NormalTweet(text);
 
@@ -53,7 +53,7 @@ public class AddHabitActivity extends Activity {
             }
         });
 
-        setDateButoon.setOnClickListener(new View.OnClickListener() {
+        setDateButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 //date picker uses zero index monts
@@ -62,6 +62,13 @@ public class AddHabitActivity extends Activity {
                 datePickerDialog.show();
             }
         });
+
+        habitName.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                habitName.setText("", TextView.BufferType.EDITABLE);
+            }
+        });
+
     }
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
 

@@ -246,6 +246,7 @@ int id addHabitButton 0x7f0a0043
 int id add_habit 0x7f0a0065
 int id always 0x7f0a0011
 int id beginning 0x7f0a000d
+int id changeDateButton 0x7f0a0059
 int id checkBox_FRI 0x7f0a0051
 int id checkBox_MON 0x7f0a0046
 int id checkBox_SAT 0x7f0a0053
@@ -264,13 +265,13 @@ int id deleteHabitButton 0x7f0a005a
 int id dialog 0x7f0a0016
 int id disableHome 0x7f0a0007
 int id dropdown 0x7f0a0017
-int id editText 0x7f0a0060
 int id edit_query 0x7f0a0036
 int id end 0x7f0a000e
 int id expand_activities_button 0x7f0a0024
 int id expanded_menu 0x7f0a002a
 int id habitNameInput 0x7f0a0045
 int id habitTitle 0x7f0a0061
+int id habitViewDate 0x7f0a0060
 int id habitViewTitle 0x7f0a005b
 int id home 0x7f0a0003
 int id homeAsUp 0x7f0a0008
@@ -289,7 +290,6 @@ int id oldHabitList 0x7f0a0063
 int id progress_circular 0x7f0a0034
 int id progress_horizontal 0x7f0a0035
 int id radio 0x7f0a002d
-int id removeCompletionButton 0x7f0a0059
 int id right_container 0x7f0a0032
 int id right_icon 0x7f0a0033
 int id search_badge 0x7f0a0038

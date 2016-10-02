@@ -1,3 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Aaron Philips\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_f7b415be11836615bc64fed48b7ec0500040215f.jar" />
+    </item>
+    <item
+        jar="D:\DATA\GitHub\as1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="7a8f06cf842fe1c07e4640f4db1ddb88d33c7077">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\instant-run_3eec31dcf14e02a61e32d273356a67499ee09544.jar" />
+    </item>
+    <item
+        jar="D:\DATA\GitHub\as1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-18.0.0_4793df35c49699f3b8186801a91bb960c90929cd.jar" />
+    </item>
+    <item
+        jar="D:\DATA\GitHub\as1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="785d22379d2e04d00455c7e20ccf366ee2062de1">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_552cd43340b47c640e695f58c925ebcfc0381424.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aaron Philips\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\gson-2.7_6fc92dbd02925e5faddf24a351cc2658d04efd5a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Aaron Philips\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.4\1c295b462f16702ebe720bbb08f62e1ba80da41b\joda-time-2.9.4.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="1c295b462f16702ebe720bbb08f62e1ba80da41b">
+        <dex dex="D:\DATA\GitHub\as1\app\build\intermediates\pre-dexed\debug\joda-time-2.9.4_7a5250e845461b71fea57da0e09d092826465c9d.jar" />
+    </item>
+
+</items>

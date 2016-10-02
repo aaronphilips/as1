@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Date Created"
-        android:id="@+id/removeCompletionButton"
+        android:id="@+id/changeDateButton"
         android:layout_below="@+id/deleteHabitButton"
         android:layout_alignParentEnd="true" />
 
@@ -89,7 +89,7 @@
         android:id="@+id/habitViewDate"
         android:layout_below="@+id/deleteHabitButton"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/removeCompletionButton"
+        android:layout_toStartOf="@+id/changeDateButton"
         android:focusable="false"
         android:enabled="false" />
 
@@ -100,7 +100,7 @@
         android:id="@+id/textView14"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/removeCompletionButton" />
+        android:layout_below="@+id/changeDateButton" />
 
 
 </RelativeLayout>

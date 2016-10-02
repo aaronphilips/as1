@@ -779,6 +779,7 @@ containing a value of this type.
         public static final int add_habit=0x7f0a0065;
         public static final int always=0x7f0a0011;
         public static final int beginning=0x7f0a000d;
+        public static final int changeDateButton=0x7f0a0059;
         public static final int checkBox_FRI=0x7f0a0051;
         public static final int checkBox_MON=0x7f0a0046;
         public static final int checkBox_SAT=0x7f0a0053;
@@ -797,13 +798,13 @@ containing a value of this type.
         public static final int dialog=0x7f0a0016;
         public static final int disableHome=0x7f0a0007;
         public static final int dropdown=0x7f0a0017;
-        public static final int editText=0x7f0a0060;
         public static final int edit_query=0x7f0a0036;
         public static final int end=0x7f0a000e;
         public static final int expand_activities_button=0x7f0a0024;
         public static final int expanded_menu=0x7f0a002a;
         public static final int habitNameInput=0x7f0a0045;
         public static final int habitTitle=0x7f0a0061;
+        public static final int habitViewDate=0x7f0a0060;
         public static final int habitViewTitle=0x7f0a005b;
         public static final int home=0x7f0a0003;
         public static final int homeAsUp=0x7f0a0008;
@@ -822,7 +823,6 @@ containing a value of this type.
         public static final int progress_circular=0x7f0a0034;
         public static final int progress_horizontal=0x7f0a0035;
         public static final int radio=0x7f0a002d;
-        public static final int removeCompletionButton=0x7f0a0059;
         public static final int right_container=0x7f0a0032;
         public static final int right_icon=0x7f0a0033;
         public static final int search_badge=0x7f0a0038;
