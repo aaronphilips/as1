@@ -15,7 +15,7 @@ import org.joda.time.format.ISODateTimeFormat;
 import java.lang.reflect.Type;
 
 /**
- * Created by Aaron Philips on 9/29/2016.
+ *
  * STRAIGHT UP COPIED FROM http://stackoverflow.com/questions/26411379/jodatime-localdate-localtime-not-parsing-with-custom-json-serializer-classes
  */
 

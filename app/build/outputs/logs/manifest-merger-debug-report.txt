@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:3:5-21
 		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
@@ -38,7 +38,7 @@ ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:11:5-88
 	android:name
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:11:30-85
 application
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:13:5-30:19
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:13:5-27:19
 MERGED from [com.android.support:appcompat-v7:18.0.0] D:\DATA\GitHub\as1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\AndroidManifest.xml:19:5-20
 	android:label
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:15:9-41
@@ -60,17 +60,11 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:22:27-74
-activity#ca.as1.OverviewHabitTrackerActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:9-27:46
-	android:label
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:27:13-43
-	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:13-57
 activity#ca.as1.AddHabitActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:28:9-63
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:9-63
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:28:19-51
-activity#ca.as1.habitView
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:29:9-56
+		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:19-51
+activity#ca.as1.HabitView
+ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:9-56
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:29:19-44
+		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:19-44

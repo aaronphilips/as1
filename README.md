@@ -14,3 +14,4 @@ http://www.tutorialspoint.com/android/android_datepicker_control.htm
 http://stackoverflow.com/questions/4590957/how-to-set-text-in-an-edittext
 http://stackoverflow.com/questions/18267091/open-a-datepickerdialog-on-click-of-edittext-takes-two-clicks
 http://stackoverflow.com/questions/8746084/string-to-localdate
+http://stackoverflow.com/questions/6286847/how-do-i-create-an-android-spinner-as-a-popup

@@ -1,15 +1,12 @@
 package ca.as1;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import org.joda.time.LocalDate;
-import org.joda.time.LocalTime;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -30,8 +27,9 @@ public class HabitFileIO_Main {
 
 
     public static class HabitFileIO{
-        public static ArrayList<Habit> loadFromFile(Context context) {
+        public static HabitSetList loadFromFile(Context context) {
             ArrayList<Habit> habitList= new ArrayList<Habit>();
+            HabitSetList habitSetList=new HabitSetList();
             try {
                 FileInputStream fis = context.openFileInput(FILENAME);
                 BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -44,6 +42,7 @@ public class HabitFileIO_Main {
                 //code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt sept 22nd
                 Type listType=new TypeToken<ArrayList<Habit>>(){}.getType();
                 habitList = gson.fromJson(in,listType);
+                habitSetList=new HabitSetList(habitList);
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block
                 //throw new RuntimeException();
@@ -51,9 +50,9 @@ public class HabitFileIO_Main {
                 // TODO Auto-generated catch block
                 throw new RuntimeException();
             }
-            return habitList;
+            return habitSetList;
         }
-        public static void saveInFile(Context context, ArrayList<Habit> habitList) {
+        public static void saveInFile(Context context, HabitSetList habitSetList) {
             try {
 
                 FileOutputStream fos = context.openFileOutput(FILENAME,0);
@@ -62,7 +61,7 @@ public class HabitFileIO_Main {
                         .registerTypeAdapter(LocalDate.class, new LocalDateSerializer());
 
                 final Gson gson = builder.create();
-                gson.toJson(habitList,writer);
+                gson.toJson(habitSetList.getHabitArrayList(),writer);
                 writer.flush();
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block

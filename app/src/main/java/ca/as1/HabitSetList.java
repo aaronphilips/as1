@@ -16,20 +16,29 @@ import java.util.UUID;
  * Created by Aaron Philips on 9/28/2016.
  * Created solely as a wrapper class to abstract indexing from a set of habit
  */
-public class HashSetArraySetList{
+public class HabitSetList {
     private HashMap<UUID,Habit> habitHashMap;
     //private ArrayList<Habit> habitArrayList;
 
-    public HashSetArraySetList(){
+    public HabitSetList(ArrayList<Habit> inputHabitList){
         this.habitHashMap= new HashMap<UUID, Habit>();
-
+        for(Habit habit:inputHabitList){
+            habitHashMap.put(habit.getID(),habit);
+        }
+    }
+    public HabitSetList(){
+        this.habitHashMap= new HashMap<UUID, Habit>();
     }
     public Habit getHabit(UUID id){
         return habitHashMap.get(id);
     }
+
     public void removeHabit(UUID id){
         habitHashMap.remove(id);
     }
+
+    public void addHabit(Habit habit){habitHashMap.put(habit.getID(),habit);}
+
     public ArrayList<Habit> getHabitArrayList(){
         ArrayList<Habit>ret_list= new ArrayList<Habit>();
         for(Map.Entry<UUID,Habit> pair:habitHashMap.entrySet()){

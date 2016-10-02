@@ -7,23 +7,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ca.as1.habitView">
+    tools:context="ca.as1.HabitView">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Completion"
         android:id="@+id/addCompletionButton"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/deleteHabitButton"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView14" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remove Completion"
+        android:text="Change Date Created"
         android:id="@+id/removeCompletionButton"
-        android:layout_alignTop="@+id/addCompletionButton"
+        android:layout_below="@+id/deleteHabitButton"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -33,6 +33,7 @@
         android:text="Large Text"
         android:id="@+id/habitViewTitle"
         android:layout_alignTop="@+id/deleteHabitButton"
+        android:textSize="32sp"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -66,19 +67,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Total Completions"
+        android:text="Total Completions:"
         android:id="@+id/textView"
-        android:layout_above="@+id/listView"
-        android:layout_alignStart="@+id/removeCompletionButton" />
+        android:layout_alignTop="@+id/completionCount"
+        android:layout_toStartOf="@+id/completionCount" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/textView12"
+        android:text="0"
+        android:id="@+id/completionCount"
         android:layout_above="@+id/listView"
         android:layout_alignEnd="@+id/listView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/habitViewDate"
+        android:layout_below="@+id/deleteHabitButton"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/removeCompletionButton"
+        android:focusable="false"
+        android:enabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView14"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/removeCompletionButton" />
 
 
 </RelativeLayout>

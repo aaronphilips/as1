@@ -22,11 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".OverviewHabitTrackerActivity"
-            android:label="Habit Overview" />
         <activity android:name=".AddHabitActivity"></activity>
-        <activity android:name=".habitView"></activity>
+        <activity android:name=".HabitView"></activity>
     </application>
 
 </manifest>

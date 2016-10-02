@@ -3,7 +3,6 @@ package ca.as1;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class AddHabitActivity extends Activity {
-    private ArrayList<Habit> habitList;
+    private HabitSetList habitSetList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ public class AddHabitActivity extends Activity {
 
         final LocalDate date = new LocalDate();
         dateEditText.setText(date.toString(), TextView.BufferType.EDITABLE);
-        habitList=HabitFileIO_Main.HabitFileIO.loadFromFile(this);
+        habitSetList =HabitFileIO_Main.HabitFileIO.loadFromFile(this);
 
 
         add_habitButton.setOnClickListener(new View.OnClickListener() {
@@ -45,11 +44,12 @@ public class AddHabitActivity extends Activity {
 
                 //newTweet.getMessage();
 
-                //habitList.add(newTweet);
+                //habitSetList.add(newTweet);
 
                 //adapter.notifyDataSetChanged();
                 addHabit();
-                HabitFileIO_Main.HabitFileIO.saveInFile(AddHabitActivity.this, habitList);
+                HabitFileIO_Main.HabitFileIO.saveInFile(AddHabitActivity.this, habitSetList);
+                finish();
             }
         });
 
@@ -88,7 +88,7 @@ public class AddHabitActivity extends Activity {
 
     private void addHabit(){
         Habit newhabit=buildHabit();
-        habitList.add(newhabit);
+        habitSetList.addHabit(newhabit);
     }
     private void saveHabits(){
 

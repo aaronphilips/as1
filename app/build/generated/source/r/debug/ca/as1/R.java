@@ -760,7 +760,6 @@ containing a value of this type.
         public static final int ic_stat_name=0x7f020058;
     }
     public static final class id {
-        public static final int HabitTitle=0x7f0a005f;
         public static final int action_bar=0x7f0a001a;
         public static final int action_bar_activity_content=0x7f0a0000;
         public static final int action_bar_container=0x7f0a0019;
@@ -777,7 +776,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0a0023;
         public static final int addCompletionButton=0x7f0a0057;
         public static final int addHabitButton=0x7f0a0043;
-        public static final int add_habit=0x7f0a0062;
+        public static final int add_habit=0x7f0a0065;
         public static final int always=0x7f0a0011;
         public static final int beginning=0x7f0a000d;
         public static final int checkBox_FRI=0x7f0a0051;
@@ -788,21 +787,24 @@ containing a value of this type.
         public static final int checkBox_TUE=0x7f0a004c;
         public static final int checkBox_WED=0x7f0a004d;
         public static final int checkbox=0x7f0a002b;
-        public static final int clear=0x7f0a0061;
+        public static final int clear=0x7f0a0064;
         public static final int collapseActionView=0x7f0a0012;
+        public static final int completionCount=0x7f0a005f;
         public static final int createHabitTitle=0x7f0a0042;
         public static final int dateCreatedInput=0x7f0a0044;
         public static final int default_activity_button=0x7f0a0026;
-        public static final int deleteHabitButton=0x7f0a0058;
+        public static final int deleteHabitButton=0x7f0a005a;
         public static final int dialog=0x7f0a0016;
         public static final int disableHome=0x7f0a0007;
         public static final int dropdown=0x7f0a0017;
+        public static final int editText=0x7f0a0060;
         public static final int edit_query=0x7f0a0036;
         public static final int end=0x7f0a000e;
         public static final int expand_activities_button=0x7f0a0024;
         public static final int expanded_menu=0x7f0a002a;
         public static final int habitNameInput=0x7f0a0045;
-        public static final int habitViewTitle=0x7f0a005a;
+        public static final int habitTitle=0x7f0a0061;
+        public static final int habitViewTitle=0x7f0a005b;
         public static final int home=0x7f0a0003;
         public static final int homeAsUp=0x7f0a0008;
         public static final int icon=0x7f0a0028;
@@ -810,13 +812,13 @@ containing a value of this type.
         public static final int image=0x7f0a0025;
         public static final int left_icon=0x7f0a0031;
         public static final int listMode=0x7f0a0004;
-        public static final int listView=0x7f0a005c;
+        public static final int listView=0x7f0a005d;
         public static final int list_item=0x7f0a0027;
         public static final int middle=0x7f0a000f;
         public static final int never=0x7f0a0014;
         public static final int none=0x7f0a0010;
         public static final int normal=0x7f0a0005;
-        public static final int oldHabitList=0x7f0a0060;
+        public static final int oldHabitList=0x7f0a0063;
         public static final int progress_circular=0x7f0a0034;
         public static final int progress_horizontal=0x7f0a0035;
         public static final int radio=0x7f0a002d;
@@ -841,10 +843,11 @@ containing a value of this type.
         public static final int split_action_bar=0x7f0a001c;
         public static final int submit_area=0x7f0a003f;
         public static final int tabMode=0x7f0a0006;
-        public static final int textView=0x7f0a005d;
+        public static final int textView=0x7f0a005e;
         public static final int textView10=0x7f0a004a;
-        public static final int textView11=0x7f0a005b;
-        public static final int textView12=0x7f0a005e;
+        public static final int textView11=0x7f0a005c;
+        public static final int textView13=0x7f0a0062;
+        public static final int textView14=0x7f0a0058;
         public static final int textView2=0x7f0a0048;
         public static final int textView3=0x7f0a0049;
         public static final int textView4=0x7f0a004b;
