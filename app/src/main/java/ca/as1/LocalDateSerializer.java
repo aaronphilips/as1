@@ -17,6 +17,7 @@ import java.lang.reflect.Type;
 /**
  *
  * STRAIGHT UP COPIED FROM http://stackoverflow.com/questions/26411379/jodatime-localdate-localtime-not-parsing-with-custom-json-serializer-classes
+ * Wanted to used Joda LocalDate, but needed to parse through gson builder
  */
 
 public class LocalDateSerializer implements JsonDeserializer<LocalDate>, JsonSerializer<LocalDate>

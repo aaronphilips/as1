@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,7 +29,7 @@ public class MainHabitTrackerActivity extends Activity {
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
+		//set up views and load from memory
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		habitSetList =HabitFileIO_Main.HabitFileIO.loadFromFile(this);
@@ -146,7 +145,7 @@ public class MainHabitTrackerActivity extends Activity {
 	}
 
 	public void gotoHabitView(UUID uuid){
-		Intent intent = new Intent(MainHabitTrackerActivity.this,HabitView.class);
+		Intent intent = new Intent(MainHabitTrackerActivity.this,HabitViewActivity.class);
 		intent.putExtra("uuid",uuid.toString());
 		startActivity(intent);
 	}

@@ -23,6 +23,7 @@ public class AddHabitActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //setting up views
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_habit);
         Button add_habitButton = (Button) findViewById(R.id.addHabitButton);
@@ -40,15 +41,8 @@ public class AddHabitActivity extends Activity {
             public void onClick(View v) {
                 setResult(RESULT_OK);
 
-                //Tweet newTweet = new NormalTweet(text);
-
-                //newTweet.getMessage();
-
-                //habitSetList.add(newTweet);
-
-                //adapter.notifyDataSetChanged();
                 addHabit();
-                HabitFileIO_Main.HabitFileIO.saveInFile(AddHabitActivity.this, habitSetList);
+                saveHabits();
                 finish();
             }
         });
@@ -80,6 +74,7 @@ public class AddHabitActivity extends Activity {
     };
 
     private Habit buildHabit(){
+        //setting up the habit
         HashSet<DayOfWeek> selectedDays=getSelectedDays(getCheckboxes());
         String habitName=((EditText) findViewById((R.id.habitNameInput))).getText().toString();
 
@@ -98,9 +93,9 @@ public class AddHabitActivity extends Activity {
         habitSetList.addHabit(newhabit);
     }
     private void saveHabits(){
-
+        HabitFileIO_Main.HabitFileIO.saveInFile(AddHabitActivity.this, habitSetList);
     }
-
+    //see which checkbox is selected
     private HashSet<DayOfWeek> getSelectedDays(ArrayList<CheckBox> checkBoxes){
         HashSet<DayOfWeek> selectedDays = new HashSet<DayOfWeek>();
 

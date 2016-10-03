@@ -1,7 +1,5 @@
 package ca.as1;
 
-import org.joda.time.LocalDate;
-
 /**
  * Created by aaron on 9/25/16.
  */
@@ -15,9 +13,9 @@ public enum DayOfWeek {
     SUNDAY("Sunday",7);
 
     private int value;
-    private String toString;
+    private String string;
     DayOfWeek(String toString,int value){
-        this.toString=toString;
+        this.string =toString;
         this.value=value;
     }
     public int getValue(){
@@ -25,7 +23,7 @@ public enum DayOfWeek {
     }
     @Override
     public String toString() {
-        return toString;
+        return string;
     }
 
 

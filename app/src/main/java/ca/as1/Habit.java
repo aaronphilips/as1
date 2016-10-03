@@ -14,6 +14,7 @@ import java.util.UUID;
 
 /**
  * Created by aaron on 9/25/16.
+ * Main class, self explanatory names
  */
 public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     private ArrayList<LocalDate> completions;
@@ -23,19 +24,7 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     private UUID habitID;
     private String shortFormDaysString;
 
-    public ArrayList<LocalDate> getCompletions() {
-        return completions;
-    }
 
-    public void addCompletions(LocalDate newCompletion) {
-        this.completions.add(newCompletion);
-    }
-
-    public void removeCompletion(LocalDate completion){
-        if(completions.contains(completion)){
-            completions.remove(completion);
-        }
-    }
 
     public Habit(String name, LocalDate dateCreated,HashSet<DayOfWeek> daysOfWeek){
         if(daysOfWeek.size()<1){
@@ -50,14 +39,22 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
 
     }
 
+    public ArrayList<LocalDate> getCompletions() {
+        return completions;
+    }
+
+    public void addCompletion(LocalDate newCompletion) {
+        this.completions.add(newCompletion);
+    }
+
+    public void removeCompletion(LocalDate completion){
+        if(completions.contains(completion)){
+            completions.remove(completion);
+        }
+    }
     @Override
     public String toString(){
         return name;
-    }
-    public boolean completedToday(){
-
-        //TODO compare with today date
-        return true;
     }
 
     public UUID getID() {

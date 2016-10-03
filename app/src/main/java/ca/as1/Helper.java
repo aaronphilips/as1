@@ -2,6 +2,7 @@ package ca.as1;
 
 /**
  * Created by Aaron Philips on 10/1/2016.
+ * small helper function to help with day swiching for main view
  */
 public class Helper {
     public static class Functions{

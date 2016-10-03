@@ -14,7 +14,9 @@ import java.util.UUID;
 
 /**
  * Created by Aaron Philips on 9/28/2016.
- * Created solely as a wrapper class to abstract indexing from a set of habit
+ * Created solely as a wrapper class to abstract indexing from a set of habit.
+ * I wanted the behaviour of a set, but to easily get arraylists, for adapters
+ * Also wanted arraylist depending on day I wanted to view
  */
 public class HabitSetList {
     private HashMap<UUID,Habit> habitHashMap;
@@ -47,6 +49,7 @@ public class HabitSetList {
         Collections.sort(ret_list);
         return ret_list;
     }
+    //overloaded constructor for specific day view
     public ArrayList<Habit> getHabitArrayList(DayOfWeek dayOfWeek){
         ArrayList<Habit>ret_list= new ArrayList<Habit>();
         for(Map.Entry<UUID,Habit> pair:habitHashMap.entrySet()){
@@ -57,11 +60,7 @@ public class HabitSetList {
         Collections.sort(ret_list);
         return ret_list;
     }
-//    private ArrayList<Habit> convertToArraylist(){
-//        //for(Entry)
-//        return new ArrayList<Habit>();
-//    }
-
+//
 
 
 }

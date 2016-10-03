@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 /**
  * Created by Aaron Philips on 9/28/2016.
+ * file to load and save from internal memory
+ * uses gson
  */
 
 public class HabitFileIO_Main {
