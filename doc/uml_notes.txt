@@ -1,0 +1,19 @@
+Extra description of UML
+
+The Habit class is the main class and holds all the data and functions required for a habit. this includes a list of editable completions referenced by Date
+
+Each habit also has set of days that it occurs on, using an DayOfWeek Enum class
+
+Each Habit instance is uniquely identifiable with UUID by impenmenting the UniquelyIdentifiable Interface
+
+
+All Habits are saved in a single container, the HabitSetList.
+
+The HabitSetList instances are saved and loaded with the static class HabitFileIO. To perform operations on a specific habit
+  it is selected with its unique UUID. This avoids any use of indexing by numbers, or passing of objects through activities.
+  All that is passed around is a habits UUID, and then the static HabitFileIO class is used to save and load changes to HabitSet list
+ 
+There are 3 activities. The main one is used to view all habits or habits by day (by default selecting the current day).
+  clicking one of the listed habits takes you to the HabitViewActivity, where changes and completions can be added or removed.
+  Also in the main activity you can select the Add habit button, which takes you to the AddHabitActivity. 
+  This activity has all the required options to set up a recurring habit
