@@ -1,6 +1,8 @@
 # as1
-cmput 301 assignment by Aaron Philips
-CCID aphilips
+cmput 301 assignment by Aaron Philips,
+
+CCID: aphilips
+url to video demo: https://www.youtube.com/watch?v=CSqcCDUnSdo&feature=youtu.be
 
 This is a simple app for tracking habits and completions for created habits.
 The app will by default open to current day of the week and display the habits for that day.
