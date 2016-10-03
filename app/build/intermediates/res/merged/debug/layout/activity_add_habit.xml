@@ -34,10 +34,10 @@
         android:ems="10"
         android:id="@+id/dateCreatedInput"
         android:layout_below="@+id/habitNameInput"
-        android:layout_alignEnd="@+id/checkBox_MON"
-        android:layout_toEndOf="@+id/textView5"
         android:focusable="false"
-        android:enabled="true" />
+        android:enabled="true"
+        android:layout_alignStart="@+id/habitNameInput"
+        android:layout_alignEnd="@+id/textView2" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,8 +45,8 @@
         android:id="@+id/habitNameInput"
         android:layout_alignParentTop="true"
         android:text="habitname"
-        android:layout_alignStart="@+id/dateCreatedInput"
-        android:layout_alignEnd="@+id/addHabitButton" />
+        android:layout_alignEnd="@+id/addHabitButton"
+        android:layout_toEndOf="@+id/textView5" />
 
     <CheckBox
         android:layout_width="wrap_content"

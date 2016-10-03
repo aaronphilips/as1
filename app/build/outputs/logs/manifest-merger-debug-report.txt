@@ -1,70 +1,70 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:3:5-21
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:3:5-21
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
 	android:versionCode
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:7:5-44
-MERGED from [com.android.support:appcompat-v7:18.0.0] D:\DATA\GitHub\as1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\AndroidManifest.xml:18:5-42
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:7:5-44
+MERGED from [com.android.support:appcompat-v7:18.0.0] /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/18.0.0/AndroidManifest.xml:18:5-42
 	android:targetSdkVersion
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:7:15-41
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
-		INJECTED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:7:15-41
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
+		INJECTED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml
 android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:9:5-89
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:9:5-89
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:9:30-86
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:9:30-86
 android:uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:10:5-83
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:10:5-83
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:10:30-80
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:10:30-80
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:11:5-88
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:11:5-88
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:11:30-85
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:11:30-85
 application
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:13:5-27:19
-MERGED from [com.android.support:appcompat-v7:18.0.0] D:\DATA\GitHub\as1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\AndroidManifest.xml:19:5-20
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:13:5-27:19
+MERGED from [com.android.support:appcompat-v7:18.0.0] /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/18.0.0/AndroidManifest.xml:19:5-20
 	android:label
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:14:9-46
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:14:9-46
 activity#ca.as1.MainHabitTrackerActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:16:9-24:20
 	android:label
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:18:13-45
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:18:13-45
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:17:13-53
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:17:13-53
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:22:27-74
 activity#ca.as1.AddHabitActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:9-63
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:25:9-63
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:25:19-51
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:25:19-51
 activity#ca.as1.HabitViewActivity
-ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:9-64
+ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:26:9-64
 	android:name
-		ADDED from D:\DATA\GitHub\as1\app\src\main\AndroidManifest.xml:26:19-52
+		ADDED from /afs/ualberta.ca/home/a/p/aphilips/Documents/as1/app/src/main/AndroidManifest.xml:26:19-52

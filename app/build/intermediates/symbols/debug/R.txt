@@ -249,7 +249,7 @@ int id availableDays 0x7f0a0058
 int id beginning 0x7f0a000d
 int id changeDateButton 0x7f0a0059
 int id checkBox_FRI 0x7f0a0051
-int id checkBox_MON 0x7f0a0046
+int id checkBox_MON 0x7f0a0048
 int id checkBox_SAT 0x7f0a0053
 int id checkBox_SUN 0x7f0a0055
 int id checkBox_THU 0x7f0a004f
@@ -315,7 +315,7 @@ int id textView 0x7f0a005e
 int id textView10 0x7f0a004a
 int id textView11 0x7f0a005c
 int id textView13 0x7f0a0062
-int id textView2 0x7f0a0048
+int id textView2 0x7f0a0046
 int id textView3 0x7f0a0049
 int id textView4 0x7f0a004b
 int id textView5 0x7f0a0047

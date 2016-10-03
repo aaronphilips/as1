@@ -782,7 +782,7 @@ containing a value of this type.
         public static final int beginning=0x7f0a000d;
         public static final int changeDateButton=0x7f0a0059;
         public static final int checkBox_FRI=0x7f0a0051;
-        public static final int checkBox_MON=0x7f0a0046;
+        public static final int checkBox_MON=0x7f0a0048;
         public static final int checkBox_SAT=0x7f0a0053;
         public static final int checkBox_SUN=0x7f0a0055;
         public static final int checkBox_THU=0x7f0a004f;
@@ -848,7 +848,7 @@ containing a value of this type.
         public static final int textView10=0x7f0a004a;
         public static final int textView11=0x7f0a005c;
         public static final int textView13=0x7f0a0062;
-        public static final int textView2=0x7f0a0048;
+        public static final int textView2=0x7f0a0046;
         public static final int textView3=0x7f0a0049;
         public static final int textView4=0x7f0a004b;
         public static final int textView5=0x7f0a0047;
