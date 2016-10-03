@@ -9,12 +9,16 @@ The app will by default open to current day of the week and display the habits f
 The user can then switch days or use an overview to see all habits.
 Upon clicking a habit, the user can add a completion, or remove any previous completion.
 Any changes will be saved and will persist past the closing of the app.
+The doc/ folder has the UML as well as some notes about it
+The bin/ folder has the apks
+The app/src/main/java/ca/as1 folder has the java code.
+The app/src/androidTest/java/ca/as1 folder has the junit tests
+I didn't want to change the file structure too much, as the spec said it needed to be buildable.
 
 HEAVILY INSPIRED BY LONELY TWITTER AT https://github.com/watts1/lonelyTwitter that was used as a teaching tool for this course
 
-
-Below are some links I found useful. Direct usages are in commments in source code. I also used Serializer class that I found for the Jodatime Library I used. 
-I didn't include in this in the uml anymore than gson builders and such. I have cited the source below and in the comments of the code, however
+I used the Jodatime library instead of the default java 6 one that comes with android.
+Below are some links I found useful. Direct usages are in commments in source code. I also used Serializer class that I found for the Jodatime Library I used. I didn't include in this in the uml anymore than gson builders and such. I have cited the source below and in the comments of the code, however
 
 http://stackoverflow.com/questions/5810084/android-alertdialog-single-button
 http://stackoverflow.com/questions/9246934/working-with-enums-in-android
