@@ -15,7 +15,7 @@ http://stackoverflow.com/questions/4590957/how-to-set-text-in-an-edittext
 http://stackoverflow.com/questions/18267091/open-a-datepickerdialog-on-click-of-edittext-takes-two-clicks
 http://stackoverflow.com/questions/8746084/string-to-localdate
 http://stackoverflow.com/questions/6286847/how-do-i-create-an-android-spinner-as-a-popup
-
+http://stackoverflow.com/questions/33802971/alternative-for-string-join-in-android
 
 
 
@@ -24,6 +24,10 @@ http://stackoverflow.com/questions/6286847/how-do-i-create-an-android-spinner-as
 
 This app is under the apache 2.0 licence, but these are licences for stackoverflow over various years. I used the above links, and for direct ideas, I have the link in a comment before the code.
 License
+
+
+
+
 
 THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
 

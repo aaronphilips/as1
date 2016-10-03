@@ -1,8 +1,13 @@
 package ca.as1;
 
+import android.text.TextUtils;
+import android.util.Log;
+
 import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.UUID;
 
@@ -16,7 +21,7 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     private String name;
     private LocalDate dateCreated;
     private UUID habitID;
-
+    private String shortFormDaysString;
 
     public ArrayList<LocalDate> getCompletions() {
         return completions;
@@ -26,6 +31,11 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
         this.completions.add(newCompletion);
     }
 
+    public void removeCompletion(LocalDate completion){
+        if(completions.contains(completion)){
+            completions.remove(completion);
+        }
+    }
 
     public Habit(String name, LocalDate dateCreated,HashSet<DayOfWeek> daysOfWeek){
         if(daysOfWeek.size()<1){
@@ -36,7 +46,7 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
         this.daysOfWeek=daysOfWeek;
         this.completions=new ArrayList<LocalDate>();
         this.habitID=UUID.randomUUID();
-
+        this.shortFormDaysString = buildShortFormDaysString();
 
     }
 
@@ -64,4 +74,25 @@ public class Habit implements UniquelyIdentifiable, Comparable<Habit> {
     public LocalDate getDateCreated(){
         return this.dateCreated;
     }
+    public HashSet<DayOfWeek> getDaysOfWeek(){
+        return daysOfWeek;
+    }
+
+    public String getShortFormDaysString(){
+        return this.shortFormDaysString;
+    }
+    //http://stackoverflow.com/questions/33802971/alternative-for-string-join-in-android
+    //didn't know about the android way of doing this and textutils
+    private String buildShortFormDaysString(){
+        ArrayList<String> strings= new ArrayList<String>();
+        ArrayList<DayOfWeek> dayOfWeeks=new ArrayList<DayOfWeek>(this.getDaysOfWeek());
+        Collections.sort(dayOfWeeks);
+        for(DayOfWeek dayOfWeek:dayOfWeeks ){
+            Log.d("GOT HABIT",dayOfWeek.toString());
+            strings.add(dayOfWeek.toString().substring(0,3));
+        }
+
+        return TextUtils.join(", " ,strings);
+    }
+
 }

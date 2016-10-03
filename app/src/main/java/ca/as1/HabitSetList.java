@@ -47,6 +47,16 @@ public class HabitSetList {
         Collections.sort(ret_list);
         return ret_list;
     }
+    public ArrayList<Habit> getHabitArrayList(DayOfWeek dayOfWeek){
+        ArrayList<Habit>ret_list= new ArrayList<Habit>();
+        for(Map.Entry<UUID,Habit> pair:habitHashMap.entrySet()){
+            if(pair.getValue().getDaysOfWeek().contains(dayOfWeek)){
+                ret_list.add(pair.getValue());
+            }
+        }
+        Collections.sort(ret_list);
+        return ret_list;
+    }
 //    private ArrayList<Habit> convertToArraylist(){
 //        //for(Entry)
 //        return new ArrayList<Habit>();

@@ -20,12 +20,11 @@ import org.joda.time.LocalDate;
 
 public class MainHabitTrackerActivity extends Activity {
 
-	//private static final String FILENAME = "file.sav";
-	//private EditText bodyText;
 	private ListView oldHabitList;
 	private HabitSetList habitSetList = new HabitSetList();
 	private ArrayAdapter<Habit> adapter;
-
+	private DayOfWeek day;
+	private int dayInt= new LocalDate().getDayOfWeek();
 	/**
 	 * Called when the activity is first created.
 	 */
@@ -34,26 +33,27 @@ public class MainHabitTrackerActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
-		int dayInt= new LocalDate().getDayOfWeek();
-		Log.d("GOT HABIT",Integer.toString(dayInt));
-		Intent intent= getIntent();
-		if(intent.hasExtra("dayVal")){
-			String dayVal=intent.getStringExtra("dayVal");
-
-			dayInt= Integer.parseInt(dayVal);
-			Log.d("GOT HABIT",Integer.toString(dayInt));
-		}
-
-
-		DayOfWeek day= Helper.Functions.getDayfromInt(dayInt);
-
-		TextView habitTitle = (TextView) findViewById(R.id.habitTitle);
-		habitTitle.setText(day.toString(), TextView.BufferType.EDITABLE);
 		habitSetList =HabitFileIO_Main.HabitFileIO.loadFromFile(this);
 
-		Button add_habitButton = (Button) findViewById(R.id.add_habit);
 
+
+		Intent intent= getIntent();
+		if(intent.hasExtra("dayVal")){
+
+			dayInt= Integer.parseInt(intent.getStringExtra("dayVal"));
+
+		}
+
+		TextView habitTitle = (TextView) findViewById(R.id.habitTitle);
+		habitTitle.setText("All Habits", TextView.BufferType.EDITABLE);
+
+		if (dayInt>0){
+			Log.d("GOT HABIT","actually day");
+			 day= Helper.Functions.getDayfromInt(dayInt);
+			habitTitle.setText(day.toString(), TextView.BufferType.EDITABLE);
+		}
+
+		Button add_habitButton = (Button) findViewById(R.id.add_habit);
 		oldHabitList = (ListView) findViewById(R.id.oldHabitList);
 
 		Button switchDayButton = (Button) findViewById(R.id.clear);
@@ -62,9 +62,6 @@ public class MainHabitTrackerActivity extends Activity {
 
 			public void onClick(View v) {
 				setResult(RESULT_OK);
-				//Tweet newTweet = new NormalTweet(text);
-				//newTweet.getMessage();
-				//habitSetList.add(newTweet);
 				gotoAddHabitActivity();
 				adapter.notifyDataSetChanged();
 				HabitFileIO_Main.HabitFileIO.saveInFile(MainHabitTrackerActivity.this, habitSetList);
@@ -73,8 +70,6 @@ public class MainHabitTrackerActivity extends Activity {
 		switchDayButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
-//				adapter.clear();
-//				habitSetList.clear();
 				switchDay();
 
 			}
@@ -96,7 +91,13 @@ public class MainHabitTrackerActivity extends Activity {
 		oldHabitList.invalidate();
 		adapter = new ArrayAdapter<Habit>(this,
 				R.layout.list_item, habitSetList.getHabitArrayList());
+		if(dayInt>0){
+			adapter = new ArrayAdapter<Habit>(this,
+					R.layout.list_item, habitSetList.getHabitArrayList(Helper.Functions.getDayfromInt(dayInt)));
+		}
+
 		oldHabitList.setAdapter(adapter);
+
 		super.onResume();
 	}
 
@@ -110,86 +111,17 @@ public class MainHabitTrackerActivity extends Activity {
 		oldHabitList.setAdapter(adapter);
 	}
 
-//	private void loadFromFile() {
-//
-//		try {
-//			FileInputStream fis = openFileInput(FILENAME);
-//			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-//			Gson gson =new Gson();
-//			//code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt sept 22nd
-//			Type listType=new TypeToken<ArrayList<Habit>>(){}.getType();
-//			habitSetList = gson.fromJson(in,listType);
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//			builder.setMessage("Hey \n Looks like this is the first time you used Aaron Philips' habit tracker")
-//					.setCancelable(false)
-//					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//						public void onClick(DialogInterface dialog, int id) {
-//							//do things
-//						}
-//					});
-//			AlertDialog alert = builder.create();
-//			alert.show();
-//			//throw new RuntimeException();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			throw new RuntimeException();
-//		}
-//	}
-
-//	private void saveInFile() {
-//		try {
-//
-//			FileOutputStream fos = openFileOutput(FILENAME,0);
-//			OutputStreamWriter writer = new OutputStreamWriter(fos);
-//			Gson gson = new Gson();
-//			gson.toJson(habitSetList,writer);
-//			writer.flush();
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			throw new RuntimeException();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			throw new RuntimeException();
-//		}
-//	}
-
 	public void switchDay() {
 		//http://stackoverflow.com/questions/6286847/how-do-i-create-an-android-spinner-as-a-popup
 		AlertDialog.Builder b = new AlertDialog.Builder(this);
 		b.setTitle("Choose Day to Check Habits");
-		String[] types = {"Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+		String[] types = {"All","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 		b.setItems(types, new DialogInterface.OnClickListener() {
 
 			public void onClick(DialogInterface dialog, int which) {
 
 				dialog.dismiss();
-				String dayVal="";
-				switch(which){
-					case 0:
-						dayVal="1";
-						break;
-					case 1:
-						dayVal="2";
-						break;
-					case 2:
-						dayVal="3";
-						break;
-					case 3:
-						dayVal="4";
-						break;
-					case 4:
-						dayVal="5";
-						break;
-					case 5:
-						dayVal="6";
-						break;
-					case 6:
-
-						dayVal="7";
-						break;
-				}
+				String dayVal=Integer.toString(which);
 
 				gotoDayActivity(dayVal);
 			}
